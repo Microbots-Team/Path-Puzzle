@@ -6,10 +6,6 @@ The project combines **artificial intelligence**, **computer vision**, and **rob
 
 ---
 
-## 👥 Participant Profile
-A collaborative project developed by a team of tech enthusiasts passionate about blending **AI**, **robotics**, and **interactive design** to create smart, playful systems.
-
----
 
 ## 💡 Project Overview
 **Path Puzzle** is designed to explore the integration of **machine learning** and **computer vision** in real-world interactive systems.  
