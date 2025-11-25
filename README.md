@@ -1,51 +1,76 @@
-# 🧩 Path Puzzle
+# 🎲 Path Puzzle
 
-An interactive **AI-powered puzzle game** where players must discover the correct order of objects along a defined path.  
-If the sequence is correct, the objects successfully cross; if not, the path throws them off.  
-The project combines **artificial intelligence**, **computer vision**, and **robotics** to deliver a logical and engaging interactive experience.
+An interactive vision-based puzzle where visitors are shown a **binary number** (e.g., `011`) and must convert it into its **decimal value** using a physical dice.  
+A camera detects the dice using **YOLOv6 accelerated by the Raspberry Pi 5 AI Kit**, and the conveyor reacts based on whether the visitor answered correctly.
+
+If the dice face matches the correct decimal conversion, it passes smoothly on the conveyor.  
+If the answer is incorrect, a baby stepper motor activates to block the dice from moving forward.
+
+The project combines **artificial intelligence**, **computer vision**, **robotics**, and educational logic into one engaging interactive experience.
 
 ---
 
 
 ## 💡 Project Overview
-**Path Puzzle** is designed to explore the integration of **machine learning** and **computer vision** in real-world interactive systems.  
-By analyzing the order of objects placed on the path, the system decides whether to allow them to pass or reject them, creating an intuitive logic-based challenge.
+The **Path Puzzle** demonstrates how computer vision and edge AI can be applied in real-time physical interactions.
+
+---
+### 🧩 How the Puzzle Works  
+1. The system **displays a binary number** to the visitor (e.g., `011`, `101`, `110` — values from 1 to 6 in binary).  
+2. The visitor must **convert the binary number into its decimal value**.  
+3. They place a **standard dice** on the conveyor to submit their answer.  
+4. The camera captures the dice and YOLOv6 (running on Raspberry Pi 5 with AI Kit) detects the number of circular dots.  
+5. If the detected dice value matches the correct decimal result:  
+   ✔️ The conveyor allows the dice to pass.  
+6. If the dice value does NOT match the binary number:  
+   ❌ A baby stepper motor activates, blocking the dice from moving forward.
+
+This setup provides a hands-on way to learn binary-to-decimal conversion while interacting with AI-powered hardware.
 
 ---
 
 ## ⚙️ Components and Parts Used
-- 🧠 **Raspberry Pi** – handles image processing and main logic control  
-- ⚙️ **Arduino** – controls motion and motor responses  
-- 🔄 **Stepper Motor / NEMA Motor** – responsible for path movement  
-- 🔌 **Motor Driver Circuit** – enables motor power and direction control  
-- 🧱 **Objects of Various Shapes** – used for puzzle gameplay
+- 🧠 **Raspberry Pi 5** – main controller  
+- ⚡ **Raspberry Pi AI Kit (Hailo-8L NPU)** – accelerates YOLOv6 inference  
+- 🎥 **Camera Module** – captures dice images on the conveyor  
+- 🎲 **Standard Dice (1–6 circular dot faces)**  
+- 🚚 **Mini Conveyor Belt**  
+- 🔧 **Baby Stepper Motor** – blocks incorrect answers
+- 🔄 **Stepper Motor / NEMA Motor** – responsible for path movement
+- 🔌 **Motor Driver Module**  
+- ⚙️ Wiring, connectors, and power modules  
 
 ---
 
 ## 💻 Software and Tools Used
-- 👁️ **OpenCV** – for image processing and object order recognition  
-- 🧠 **Edge Impulse** – for training an AI classification model  
-- 🔧 **Arduino IDE** – for programming motor control and logic communication
+- 🧠 **YOLOv6** – model trained for dice dot detection  
+- 👁️ **OpenCV** – real-time video capture and processing  
+- 🐍 **Python** – game logic, detection pipeline, and GPIO control  
+- 🔧 **Raspberry Pi GPIO Libraries** – motor and conveyor control  
+- ⚙️ **Hailo Runtime / AI Kit SDK** – hardware-accelerated inference  
+- 🖥️ **Arduino** – for additional motor control
 
 ---
 
-## 🌐 Connect with Us
-Follow and connect with the team on LinkedIn:  
-- [Ayman]()  
+## 👨‍💻 Contributors:
+Special thanks to : 
+- **Ayman Bakleh** [LinkedIn](https://www.linkedin.com/in/aymanbakleh/)
 
 
 ---
 
 ## 🚀 Future Improvements
-- Enhance AI classification accuracy using a larger dataset  
-- Integrate sound or visual feedback for user interaction  
-- Develop a GUI interface to monitor real-time system behavior
+
+- Improve YOLOv6 accuracy using more dice datasets  
+- Add audio or LED feedback to guide users  
+- Build a GUI for showing binary values and detection results  
+- Introduce multiple-dice challenges for advanced users
 
 ---
 
 ## 📸 Demo
-
+Coming soon!  
 
 ---
 
-**Made with ❤️ using Python, OpenCV, Edge Impulse, and Arduino.**
+Made with ❤️ using **Raspberry Pi 5**, **Raspberry Pi AI Kit**, **YOLOv6**, **Python**, and **OpenCV**.
