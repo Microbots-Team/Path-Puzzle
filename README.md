@@ -1,5 +1,15 @@
 # 🎲 Path Puzzle
 
+<img src="images/1.png" alt="Screenshot">
+
+## 📅 Project Timeline & Context
+
+- **Event:** FMEE 2025 – **AI & Robotics Club** Open Day
+- **Date:** November 10–11–12, 2025
+
+---
+## 💡 Project Overview
+
 An interactive vision-based puzzle where visitors are shown a **binary number** (e.g., `011`) and must convert it into its **decimal value** using a physical dice.  
 A camera detects the dice using **YOLOv6 accelerated by the Raspberry Pi 5 AI Kit**, and the conveyor reacts based on whether the visitor answered correctly.
 
@@ -8,11 +18,6 @@ If the answer is incorrect, a baby stepper motor activates to block the dice fro
 
 The project combines **artificial intelligence**, **computer vision**, **robotics**, and educational logic into one engaging interactive experience.
 
----
-
-
-## 💡 Project Overview
-The **Path Puzzle** demonstrates how computer vision and edge AI can be applied in real-time physical interactions.
 
 ---
 ### 🧩 How the Puzzle Works  
